@@ -7,5 +7,5 @@ import org.springframework.data.repository.CrudRepository;
  * Repository class for Checkout
  */
 
-public interface CheckoutRepository extends CrudRepository<Checkout, Long> {
+public interface CheckoutRepository extends  CrudRepository<Checkout, Long> {
 }

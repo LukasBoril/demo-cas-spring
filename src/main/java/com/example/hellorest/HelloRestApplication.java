@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.PostConstruct;
 
@@ -18,6 +21,7 @@ public class HelloRestApplication {
         SpringApplication.run(HelloRestApplication.class, args);
     }
 
+
     @PostConstruct
     public void afterInit() {
         System.out.println("\n\nEnter in Browser:\nhttp://localhost:8080 \n" +
@@ -27,6 +31,8 @@ public class HelloRestApplication {
                 "http://localhost:8080/h2-console  " + "" +
                 "-> mit Generic H2 (Embedded), org.h2.Driver, jdbc:h2:mem:testdb und sa \n\n");
     }
+
+
     @Bean
     public OpenAPI customOpenAPI(@Value("${springdoc.version}") String appVersion) {
         return new OpenAPI()

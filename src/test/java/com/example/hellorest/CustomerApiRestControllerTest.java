@@ -1,4 +1,3 @@
-/*
 package com.example.hellorest;
 
 import com.example.hellorest.model.Customer;
@@ -78,5 +77,3 @@ public class CustomerApiRestControllerTest extends AbstractTest {
     }
 
 }
-
-*/

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-/*
->>>>>>> origin/master
+
 package com.example.hellorest;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -40,6 +37,7 @@ public abstract class AbstractTest {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.writeValueAsString(obj);
     }
+
     protected <T> T mapFromJson(String json, Class<T> clazz)
             throws JsonParseException, JsonMappingException, IOException {
 
@@ -51,9 +49,10 @@ public abstract class AbstractTest {
     protected String extractEmbeddedFromHalJson(String content, String attribute) {
         final ObjectMapper mapper = new ObjectMapper();
         try {
-            Map<String,Object> map = new HashMap<>();
-            map = mapper.readValue(content, new TypeReference<HashMap<String,Object>>(){});
-            Map<String,Object> embedded = (Map<String, Object>) map.get("_embedded");
+            Map<String, Object> map = new HashMap<>();
+            map = mapper.readValue(content, new TypeReference<HashMap<String, Object>>() {
+            });
+            Map<String, Object> embedded = (Map<String, Object>) map.get("_embedded");
             List<Object> customers = (List<Object>) embedded.get(attribute);
             return mapToJson(customers);
         } catch (IOException e) {
@@ -61,10 +60,6 @@ public abstract class AbstractTest {
         }
         return null;
     }
-
-
-<<<<<<< HEAD
 }
-=======
-}*/
->>>>>>> origin/master
+
+
