@@ -1,3 +1,4 @@
+/*
 package com.example.hellorest;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -59,4 +60,4 @@ public abstract class AbstractTest {
     }
 
 
-}
+}*/
